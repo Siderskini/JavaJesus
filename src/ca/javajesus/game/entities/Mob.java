@@ -20,10 +20,10 @@ public abstract class Mob extends Entity {
     public int height;
     protected Rectangle hitBox;
     protected SpriteSheet sheet;
-    protected int health;
+    protected double health;
 
     public Mob(Level level, String name, double x, double y, int speed,
-            int width, int height, SpriteSheet sheet, int defaultHealth) {
+            int width, int height, SpriteSheet sheet, double defaultHealth) {
         super(level);
         this.name = name;
         this.x = x;
