@@ -197,6 +197,15 @@ public class Player extends Mob {
 			xTile = 0;
 			yTile = 0;
 
+
+			// Above Body Health Bar
+			screen.render(xOffset, yOffset, xTile + (yTile + 8), colour, 
+			        healthBar, scale, sheet);
+			
+			bar = new HealthBar(level, 0, colour, this.x, this.y);
+			
+			level.addEntity(bar);
+
 			// Upper Body 1
 			screen.render(xOffset + (modifier * flipSword1), yOffset, xTile
 					+ (yTile + 4) * 32, colour, flipSword1, scale, sheet);
